@@ -1,0 +1,431 @@
+/*Universal CSS*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+/*CSS Variables For Dark Mode*/
+
+:root{
+	--navbar: rgba(0, 0, 0,0.2);
+	--navbar-hover:rgba(0, 0, 0, 0.9) ;
+	--navbar-hover-bg: ;
+	--navbar-hover-content: ;
+	--theme: rgba(0, 0, 0, 0.1);
+	--about: rgba(0, 0, 0, 0.1);
+	--about-section: black;
+	--team-internship-contact: ;
+	--all-h: black;
+	--team-internship-contact-hover: black;
+	--footer: rgba(0, 0, 0,0.3);
+}
+.dark-theme{
+	--about: #202124;
+	--navbar: #202124;
+	--navbar-hover:#fff ;
+	--navbar-hover-bg:#fff;
+	--navbar-hover-content:#000 ;
+	--theme: #fff;
+	--about-section: #fff;
+	--team-internship-contact:#202124 ;
+	--all-h: #fff;
+	--team-internship-contact-hover: #fff;
+	--footer: #202124;
+}
+.title h1,.navlinks ul li a,.team .head,.internships .head,.contact h1,.footercontent p,.sociallinks p,.sociallinks ul li a i{
+	color: var(--all-h);
+}
+
+
+
+/*Navbar CSS Code*/
+
+.navbar{
+	width: 100%;
+	height: 120px;
+	display: flex;
+	padding: 20px;
+	background: var(--navbar);
+	position: relative;
+}
+.title{
+	position: absolute;
+	top: 30px;
+	left: 130px;
+}
+.title h1{
+	padding: 10px;
+}
+.title h1:hover{
+	color: var(--navbar-hover-content);
+	background: var(--navbar-hover-bg);
+	box-shadow: 5px 5px 20px 0 var(--navbar-hover);
+	transition: .7s;
+	border-radius: 40px;
+	cursor: pointer;
+}
+.navlinks{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-weight: bold;
+	padding: 40px;
+	font-size: 20px;
+}
+.navlinks ul li a{
+	text-decoration: none;
+	display: inline;	
+	margin: 20px;
+}
+.navlinks ul li:hover{
+	background: var(--navbar-hover-bg);
+	box-shadow: 5px 5px 20px var(--navbar-hover);
+	transition: 1s;
+	border-radius: 40px;
+}
+.navlinks ul li a:hover{
+	color: var(--navbar-hover-content);
+}
+.navlinks ul li{
+	text-decoration: none;
+	display: inline;
+	padding: 5px;
+}
+.darktheme{
+	position: absolute;
+	right: 0;
+	padding: 23px;
+	top: 23px;
+	cursor: pointer;
+}
+.darktheme img{
+	padding: 2px;
+	background: var(--theme);
+	border-radius:10px;
+}
+
+
+
+/*Home CSS Code*/
+
+.home{
+	width: 100%;
+	height: 700px;
+	background-image: linear-gradient(rgba(0,168,255,0.3),rgba(0,168,255,0.3)), url('images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment:fixed;
+	position: relative;
+}
+.home:before{
+	z-index: -1;
+	opacity: .3;
+	background: linear-gradient(to right , #1e5799 0%,#3ccdbb 0%,#16c9f6 100%);
+}
+.content{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	color: #fff;
+	font-size: 20px;
+	padding: 20px;
+}
+.content h1 ,.content p{
+	margin: 30px;
+	text-shadow: 10px 10px 20px #000;
+}
+.changecontent:after{
+	content: "";
+	animation: changetext 10s infinite linear;
+	color: yellow;
+}
+@keyframes changetext{
+	0%{content: "WEB DEVELOPMENT";}
+	20%{content: "DIGITAL MARKETING";}
+	35%{content: "IOT & COMPUTER VISION";}
+	60%{content: "MOBILE APP DEVELOPMENT";}
+	80%{content: "CONTENT DEVELOPER";}
+	100%{content: "TALENT ACQUISTION";}
+}
+.buttons{
+	position: absolute;
+	left: 20%;
+	top: 50%;
+}
+.buttons a{
+	margin: 20px;
+	text-decoration: none;
+	outline: none;
+	border: 3px solid orange;
+	border-radius: 20px;
+	padding: 10px;
+	font-size: 20px;
+	color: white;
+}
+.buttons a:hover{
+	color: white;
+	background: orange;
+	color: black;
+	transition: 0.7s;
+	border: 3px solid green;
+}
+
+
+
+/*About Us CSS Code*/
+
+.about{
+	position: relative;
+	background-color: var(--about);
+	padding: 40px;
+	width: 100%;
+	height: 500px;
+}
+.aboutimg{
+	position: absolute;
+	left: 0;
+	top: 60px;
+}
+.aboutsection{
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 600px;
+	color: var(--about-section);
+}
+
+
+
+/*Our Team CSS Code*/
+
+.team{
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	height: 630px;
+	background:var(--team-internship-contact);
+}
+.member1{
+	position: absolute;
+	top: 22%;
+	left : 20px;
+}
+.member2{
+	position: absolute;
+	top: 22%;
+	left: 390px;
+}
+.member3{
+	position: absolute;
+	top: 22%;
+	left:760px;
+}
+.member4{
+	position: absolute;
+	top: 22%;
+	left:1130px;
+}
+.member1,.member2,.member3,.member4{
+	height: 450px;
+	width: 350px;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	border-radius: 50px;
+	padding: 30px;
+	text-align: center;
+	border: 1px solid red;
+}
+.member1:hover,.member2:hover,.member3:hover,.member4:hover{
+	box-shadow: 0 0 20px var(--team-internship-contact-hover);
+	border: 7px solid green;
+	transform: translateY(-30px);
+	transition: 0.4s;
+}
+.member1 img,.member2 img,.member3 img,.member4 img{
+	border-radius: 50%;
+	margin: 5px;
+}
+.member1 h1,.member2 h1,.member3 h1,.member4 h1{
+	text-transform: capitalize;
+	font-size: 40px;
+	margin: 5px;
+}
+.member1 h1,.member2 h1,.member3 h1,.member4 h1{
+	text-transform: capitalize;
+	font-size: 25px;
+	margin: 10px;
+}
+.social ul li,.sociallinks ul li{
+	display: inline;
+	font-size: 40px;
+	padding: 10px;
+}
+.social,.sociallinks{
+	margin: 20px;
+}
+.social ul li a i {
+	color: #fff;
+}
+.social ul li a i:hover,.sociallinks ul li a i:hover {
+	transform: translateY(-10px);
+	transition: 0.7s;
+}
+.social ul li a .facebook:hover,.sociallinks ul li a .facebook:hover{
+	color: blue;
+}
+.social ul li a .instagram:hover,.sociallinks ul li a .instagram:hover{
+	color: deeppink;
+}
+.social ul li a .twitter:hover,.sociallinks ul li a .twitter:hover{
+	color: skyblue;
+}
+.social ul li a .linkedin:hover,.sociallinks ul li a .linkedin:hover{
+	color: darkblue;
+}
+
+
+
+/*Internship CSS Code*/
+
+.internships{
+	width: 100%;
+	height: 1100px;
+	position: relative;
+	padding: 20px;
+	background:var(--team-internship-contact) ;
+}
+.internship1{
+	position: absolute;
+	left: 50px;
+	top: 10%;
+}
+.internship2{
+	position: absolute;
+	left: 530px;
+	top: 10%;
+}
+.internship3{
+	position: absolute;
+	left: 1010px;
+	top: 10%;
+}
+.internship4{
+	position: absolute;
+	left: 50px;
+	bottom: 5%;
+}
+.internship5{
+	position: absolute;
+	left: 530px;
+	bottom: 5%;
+}
+.internship6{
+	position: absolute;
+	left: 1010px;
+	bottom: 5%;
+}
+
+.internship1,.internship2,.internship3,.internship4,.internship5,.internship6{
+	height: 440px;
+	width: 450px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	border-radius: 20px;
+	padding: 20px;
+	border: 1px solid red;
+}
+.internship1:hover,.internship2:hover,.internship3:hover,.internship4:hover,.internship5:hover,.internship6:hover{
+		transform: translateY(-20px);
+		transition: 0.4s;
+		box-shadow: 20px 20px 15px var(--team-internship-contact-hover);
+}
+.links a{
+	text-decoration: none;
+	outline: none;
+	padding: 15px;
+	margin: 10px;
+	border: 1px solid orange;
+	color: #fff;
+	border-radius: 40px;
+}
+.links{
+	margin: 10px;
+}
+.links a:hover{
+	color:#000 ;
+	background-color: orange;
+	border: 2px solid green;
+}
+
+
+
+/*Contact Us CSS Code*/
+
+.contact{
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	height: 600px;
+	background: var(--team-internship-contact);
+}
+.contactimg{
+	position: absolute;
+	right: 10px;
+	top: 20%;
+}
+form{
+	position: absolute;
+	top: 20%;
+}
+form input{
+	width: 400px;
+	height: 30px;
+	padding: 5px;
+}
+form textarea{
+	width: 400px;
+	height: 200px;
+	padding: 5px;
+}
+button{
+	position: absolute;
+	bottom: 80px;
+	left: 150px;
+	border-radius: 20px;
+	font-size: 15px;
+	padding: 10px;
+}
+button:hover{
+	color: white;
+	box-shadow: 0 0 20px var(--team-internship-contact-hover);
+	background: green;
+}
+
+
+
+/*Footer CSS Code*/
+
+footer{
+	position: relative;
+	height: 110px;
+	width: 100%;
+	background: var(--footer);
+}
+.footercontent{
+	position: absolute;
+	top: 10%;
+	left: 20px;
+	padding: 20px;
+	font-size: 20px;
+}
+.sociallinks{
+	position: absolute;
+	right: 5%;
+	top: 0;
+}
+.sociallinks p{
+	font-size: 20px;
+}
